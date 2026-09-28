@@ -232,6 +232,60 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; margin: 0; }
   .sobre__blob { width: 140px; margin: 0 auto; }
 }
 
+/* ---------- galeria ---------- */
+.galeria {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem);
+  text-align: center;
+}
+.galeria__title {
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  margin-bottom: 0.8rem;
+}
+.galeria__lede {
+  max-width: 50ch;
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+  color: var(--ink-soft);
+}
+.galeria__grid {
+  columns: 3 220px;
+  column-gap: 1.1rem;
+  text-align: left;
+}
+.galeria__item {
+  margin: 0 0 1.1rem;
+  break-inside: avoid;
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.galeria__item--tall { aspect-ratio: 3 / 4.2; }
+.galeria__item span {
+  font-family: var(--serif);
+  font-style: italic;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+}
+.galeria__item--teal { background: linear-gradient(160deg, var(--teal) 0%, var(--teal-deep) 100%); }
+.galeria__item--rose { background: linear-gradient(160deg, var(--rose) 0%, var(--rose-deep) 100%); }
+.galeria__item--lilac { background: linear-gradient(160deg, var(--lilac) 0%, var(--lilac-deep) 100%); }
+.galeria__link {
+  display: inline-block;
+  margin-top: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 600;
+  color: var(--teal-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 700px) {
+  .galeria__grid { columns: 2 160px; }
+}
+
 /* ---------- cursos ---------- */
 .cursos {
   max-width: 1200px;
