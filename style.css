@@ -1,12 +1,17 @@
 :root {
-  --wall: #f3f3ef;
-  --paper: #e4e4df;
-  --ink: #1c1c1a;
-  --ink-soft: #52524d;
-  --trim: #c9de92;
-  --trim-deep: #3f5a14;
-  --red: #c92f2a;
-  --line: rgba(28, 28, 26, 0.16);
+  /* paleta: verde água (principal), rosinha e lilás, sobre um ameixa bem escuro */
+  --wall: #f8f6fa;
+  --ink: #26222e;
+  --ink-soft: #5c5667;
+  --agua: #8fd8cb;
+  --agua-deep: #13766c;
+  --rosa: #f6bfd0;
+  --rosa-claro: #fde8ef;
+  --rosa-deep: #b03c6e;
+  --lilas: #c8b4e7;
+  --lilas-claro: #eee7f8;
+  --lilas-deep: #6a4c9c;
+  --line: rgba(38, 34, 46, 0.16);
   --display: "Bricolage Grotesque", "Segoe UI", sans-serif;
   --text: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --max: 1240px;
@@ -38,7 +43,7 @@ a { color: inherit; }
 h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.05; }
 h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0.025em; }
 
-:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--lilas-deep); outline-offset: 3px; }
 
 /* ---------- nav ---------- */
 .nav {
@@ -52,7 +57,7 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
   padding: 0.85rem var(--gutter);
   background: var(--ink);
   color: var(--wall);
-  border-bottom: 4px solid var(--trim);
+  border-bottom: 4px solid var(--agua);
 }
 .nav__mark {
   font-family: var(--display);
@@ -63,18 +68,18 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 }
 .nav__links { display: flex; gap: 1.8rem; font-size: 0.95rem; font-weight: 500; }
 .nav__links a { text-decoration: none; opacity: 0.8; transition: opacity 0.2s ease, color 0.2s ease; }
-.nav__links a:hover { opacity: 1; color: var(--trim); }
+.nav__links a:hover { opacity: 1; color: var(--agua); }
 .nav__cta {
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
-  background: var(--trim);
+  background: var(--agua);
   color: var(--ink);
   padding: 0.55rem 1.2rem;
   border-radius: 100px;
   transition: background 0.2s ease;
 }
-.nav__cta:hover { background: #fff; }
+.nav__cta:hover { background: var(--rosa); }
 .nav__burger {
   display: none;
   flex-direction: column;
@@ -126,8 +131,8 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
   transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
 }
 .btn:hover { transform: translateY(-2px); }
-.btn--fill { background: var(--red); color: #fff; }
-.btn--fill:hover { background: #a82420; }
+.btn--fill { background: var(--agua-deep); color: #fff; }
+.btn--fill:hover { background: #0e5f57; }
 .btn--line { border: 2px solid var(--ink); color: var(--ink); }
 .btn--line:hover { background: var(--ink); color: var(--wall); }
 
@@ -160,7 +165,7 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
   content: "";
   position: absolute;
   top: 1.5rem; right: 0; bottom: 4rem; left: 4rem;
-  background: var(--trim);
+  background: var(--agua);
   z-index: 0;
 }
 .hero__foto {
@@ -192,7 +197,7 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 
 /* ---------- sobre ---------- */
 .sobre {
-  background: var(--trim);
+  background: var(--agua);
   padding: clamp(3.5rem, 8vw, 6rem) var(--gutter);
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -207,7 +212,7 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 .sobre__text h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.3rem; max-width: 14ch; }
 .sobre__text p { margin: 0 0 1rem; max-width: 56ch; }
 .sobre__text a { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-.sobre__text a:hover { color: var(--red); }
+.sobre__text a:hover { color: var(--rosa-deep); }
 @media (max-width: 800px) {
   .sobre { grid-template-columns: 1fr; }
   .sobre__fotos { max-width: 380px; }
@@ -243,12 +248,13 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 .obra:hover img { transform: scale(1.04); }
 
 .galeria--desenhos { background: var(--wall); }
-.galeria--desenhos .galeria__head h2 { color: var(--ink); }
 
 .galeria--telas { background: var(--ink); color: var(--wall); }
-.galeria--telas .galeria__head h2 { color: var(--trim); }
+.galeria--telas .galeria__head h2 { color: var(--agua); }
 
-.galeria--realismo { background: var(--paper); }
+.galeria--realismo { background: var(--lilas-claro); }
+.galeria--realismo .galeria__head h2 { color: var(--lilas-deep); }
+.galeria--desenhos .galeria__head h2 { color: var(--rosa-deep); }
 
 .galeria__link {
   display: inline-block;
@@ -257,7 +263,7 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.galeria__link:hover { color: var(--red); }
+.galeria__link:hover { color: var(--lilas-deep); }
 
 @media (max-width: 900px) {
   .galeria__grid { --row: 200px; }
@@ -273,13 +279,14 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
   display: inline-block;
   font-size: 0.85rem;
   font-weight: 600;
-  background: var(--trim);
+  background: var(--agua);
   padding: 0.25rem 0.8rem;
   border-radius: 100px;
   margin-bottom: 0.9rem;
 }
 .aula h3 { font-size: 2.1rem; font-weight: 800; letter-spacing: -0.02em; }
-.aula__sub { margin: 0.3rem 0 1.1rem; font-weight: 500; color: var(--red); }
+.aula__sub { margin: 0.3rem 0 1.1rem; font-weight: 500; color: var(--lilas-deep); }
+.aula + .aula .aula__idade { background: var(--rosa); }
 .aula p { color: var(--ink-soft); }
 .aula ul { padding-left: 1.2rem; margin: 1.1rem 0 1.4rem; }
 .aula li { margin-bottom: 0.35rem; }
@@ -287,7 +294,7 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 @media (max-width: 820px) { .aulas__grid { grid-template-columns: 1fr; } }
 
 /* ---------- como funciona ---------- */
-.como { background: var(--paper); padding: clamp(3.5rem, 8vw, 6rem) var(--gutter); }
+.como { background: var(--rosa-claro); padding: clamp(3.5rem, 8vw, 6rem) var(--gutter); }
 .como h2 { max-width: 16ch; font-size: clamp(2rem, 4.4vw, 3.2rem); }
 .como__lede { margin-top: 1.1rem; max-width: 50ch; color: var(--ink-soft); }
 .como__lista {
@@ -299,7 +306,7 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
   gap: 2rem;
 }
 .como__lista li { border-top: 2px solid var(--ink); padding-top: 1rem; font-size: 1.1rem; }
-.como__lista span { display: block; font-family: var(--display); font-weight: 800; font-size: 3rem; line-height: 1; color: var(--red); margin-bottom: 0.7rem; }
+.como__lista span { display: block; font-family: var(--display); font-weight: 800; font-size: 3rem; line-height: 1; color: var(--rosa-deep); margin-bottom: 0.7rem; }
 @media (max-width: 760px) { .como__lista { grid-template-columns: 1fr; gap: 1.4rem; } }
 
 /* ---------- contato ---------- */
@@ -310,13 +317,13 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
   gap: clamp(2rem, 6vw, 4.5rem);
   align-items: stretch;
 }
-.contato__foto { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 4px solid var(--trim); margin-bottom: 1.4rem; }
-.contato h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.8rem; color: var(--trim); }
+.contato__foto { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 4px solid var(--agua); margin-bottom: 1.4rem; }
+.contato h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.8rem; color: var(--agua); }
 .contato__lista { margin: 0 0 2rem; display: grid; gap: 1.2rem; }
-.contato__lista dt { font-size: 0.9rem; font-weight: 600; color: var(--trim); margin-bottom: 0.2rem; }
+.contato__lista dt { font-size: 0.9rem; font-weight: 600; color: var(--rosa); margin-bottom: 0.2rem; }
 .contato__lista dd { margin: 0; font-size: 1.1rem; }
 .contato__lista a { text-underline-offset: 3px; }
-.contato__mapa { min-height: 340px; background: #333; }
+.contato__mapa { min-height: 340px; background: #3a3542; }
 .contato__mapa iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
 @media (max-width: 800px) { .contato__inner { grid-template-columns: 1fr; } }
 
@@ -327,12 +334,12 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
   gap: 1rem;
   padding: 1.4rem var(--gutter) 1.8rem;
   background: var(--ink);
-  color: rgba(243, 243, 239, 0.7);
-  border-top: 1px solid rgba(243, 243, 239, 0.15);
+  color: rgba(248, 246, 250, 0.7);
+  border-top: 1px solid rgba(248, 246, 250, 0.15);
   font-size: 0.9rem;
 }
 .rodape a { text-decoration: none; }
-.rodape a:hover { color: var(--trim); }
+.rodape a:hover { color: var(--agua); }
 
 /* ---------- visualizador ---------- */
 .lightbox {
@@ -342,7 +349,7 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
   max-height: 100vh;
   border: 0;
   padding: 0;
-  background: rgba(14, 14, 13, 0.94);
+  background: rgba(28, 24, 34, 0.95);
   color: #fff;
 }
 .lightbox[open] { display: flex; align-items: center; justify-content: center; gap: 1rem; animation: fade 0.25s ease; }
@@ -351,7 +358,7 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 .lightbox img { max-height: 82vh; width: auto; margin: 0 auto; box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7); }
 .lightbox figcaption { margin-top: 0.9rem; font-size: 0.95rem; opacity: 0.8; }
 .lightbox button { background: transparent; border: 0; color: #fff; cursor: pointer; font-size: 3rem; line-height: 1; padding: 0.5rem 1rem; }
-.lightbox button:hover { color: var(--trim); }
+.lightbox button:hover { color: var(--agua); }
 .lightbox__close { position: absolute; top: 0.6rem; right: 1rem; font-size: 2.6rem !important; }
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
 @media (max-width: 600px) {
@@ -367,3 +374,7 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
   .hero__actions .btn { flex: 1 1 100%; text-align: center; }
   .contato .btn { display: block; text-align: center; }
 }
+
+/* no fundo escuro o botão usa o verde água claro, que contrasta melhor */
+.contato .btn--fill { background: var(--agua); color: var(--ink); }
+.contato .btn--fill:hover { background: var(--rosa); }
