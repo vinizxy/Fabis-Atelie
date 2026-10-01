@@ -4,163 +4,180 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fabi's Atelier: aulas de desenho e pintura em Itu/SP</title>
-<meta name="description" content="Aulas de desenho (mangá e artístico) e pintura em tela para crianças, adolescentes e adultos. Rua Domingos Fernandes, 229, Centro - Itu/SP.">
+<meta name="description" content="Aulas de desenho (mangá e artístico) e pintura em tela para crianças, adolescentes e adultos. Rua Domingos Fernandes, 229, Centro, Itu/SP.">
+<meta property="og:title" content="Fabi's Atelier: aulas de desenho e pintura em Itu/SP">
+<meta property="og:description" content="Desenho, pintura em tela e realismo com a Fabiana. Aula experimental pelo WhatsApp.">
+<meta property="og:image" content="img/fabiana/fabiana-atelier.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="grain"></div>
-
 <header class="nav">
   <a href="#top" class="nav__mark">Fabi's Atelier</a>
-  <nav class="nav__links">
+  <nav class="nav__links" aria-label="Principal">
     <a href="#sobre">Sobre</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#cursos">Aulas</a>
-    <a href="#como-funciona">Como funciona</a>
+    <a href="#desenhos">Desenhos</a>
+    <a href="#telas">Telas</a>
+    <a href="#realismo">Realismo</a>
+    <a href="#aulas">Aulas</a>
     <a href="#contato">Contato</a>
   </nav>
-  <a class="nav__cta" href="https://wa.me/5511948207985" target="_blank" rel="noopener">Fale no WhatsApp</a>
+  <a class="nav__cta" href="https://wa.me/5511948207985" target="_blank" rel="noopener">WhatsApp</a>
   <button class="nav__burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
     <span></span><span></span><span></span>
   </button>
 </header>
-<nav id="menu-mobile" class="menu-mobile">
+<nav id="menu-mobile" class="menu-mobile" aria-label="Menu mobile">
   <a href="#sobre">Sobre</a>
-  <a href="#galeria">Galeria</a>
-  <a href="#cursos">Aulas</a>
-  <a href="#como-funciona">Como funciona</a>
+  <a href="#desenhos">Desenhos</a>
+  <a href="#telas">Telas</a>
+  <a href="#realismo">Realismo</a>
+  <a href="#aulas">Aulas</a>
   <a href="#contato">Contato</a>
 </nav>
 
 <main id="top">
 
   <section class="hero">
-    <svg class="hero__stroke" viewBox="0 0 900 500" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M 20 380 C 120 300, 180 460, 300 400 C 420 340, 460 200, 600 220 C 740 240, 780 120, 880 140" />
-    </svg>
-    <div class="hero__inner">
-      <p class="hero__kicker">Atelier de desenho &amp; pintura em Itu/SP</p>
-      <h1 class="hero__title">Todo mundo tem um traço.<br>O seu ainda não saiu do papel.</h1>
+    <div class="hero__text">
+      <h1><span>Todo mundo tem um traço.</span> <span>O seu ainda não saiu do papel.</span></h1>
       <p class="hero__lede">Aulas de desenho, do mangá ao realismo, e pintura em tela para crianças a partir de 7 anos, adolescentes e adultos. Você traz a ideia, a Fabiana traz a técnica.</p>
       <div class="hero__actions">
         <a href="https://wa.me/5511948207985" target="_blank" rel="noopener" class="btn btn--fill">Marcar aula experimental</a>
-        <a href="#cursos" class="btn btn--line">Ver as aulas</a>
-      </div>
-      <div class="hero__palette" aria-hidden="true">
-        <span class="dot dot--teal"></span>
-        <span class="dot dot--rose"></span>
-        <span class="dot dot--lilac"></span>
+        <a href="#desenhos" class="btn btn--line">Ver os trabalhos</a>
       </div>
     </div>
-    <div class="hero__panel">
-      <div class="hero__panel-card hero__panel-card--1">
-        <span class="hero__panel-label">mangá</span>
-      </div>
-      <div class="hero__panel-card hero__panel-card--2">
-        <span class="hero__panel-label">pintura em tela</span>
-      </div>
-      <div class="hero__panel-card hero__panel-card--3">
-        <span class="hero__panel-label">grafite &amp; realismo</span>
-      </div>
+    <div class="hero__art">
+      <img class="hero__foto" src="img/fabiana/fabiana-atelier.webp" alt="Fabiana sorrindo, com um pincel na mão, ao lado de uma pintura" width="540" height="540">
+      <img class="hero__tela" src="img/telas/rosto-colorido.webp" alt="Pintura de um rosto em cores vibrantes, com as mãos cobrindo parte do rosto" width="546" height="627">
     </div>
   </section>
 
   <section id="sobre" class="sobre">
-    <div class="sobre__figure" aria-hidden="true">
-      <div class="sobre__blob"></div>
+    <div class="sobre__fotos">
+      <img class="sobre__foto sobre__foto--a" src="img/fabiana/fabiana-retrato.webp" alt="Retrato de Fabiana sorrindo, de avental com o nome do atelier" width="540" height="540" loading="lazy">
+      <img class="sobre__foto sobre__foto--b" src="img/fabiana/fabiana-avental.webp" alt="Fabiana de avental do atelier, com as mãos no cabelo" width="540" height="540" loading="lazy">
     </div>
     <div class="sobre__text">
-      <p class="eyebrow">A professora</p>
       <h2>Fabiana, artista plástica e ilustradora</h2>
       <p>Painting Dreams é o jeito que a Fabiana chama o próprio trabalho: transformar paixões e ideias soltas em obras de verdade. No atelier, em Itu, ela ensina o caminho inteiro, do primeiro traço à peça finalizada, para quem quer desenhar ou pintar de forma séria, sem perder a vontade de brincar com criatividade.</p>
       <p>Acompanhe o dia a dia do atelier e os trabalhos das turmas no Instagram <a href="https://instagram.com/fabis_atelier" target="_blank" rel="noopener">@fabis_atelier</a>.</p>
     </div>
   </section>
 
-  <section id="galeria" class="galeria">
-    <p class="eyebrow eyebrow--center">Trabalhos do atelier</p>
-    <h2 class="galeria__title">Um pouco do que sai daqui</h2>
-    <p class="galeria__lede">Quadros e desenhos feitos pela Fabiana e pelos alunos. Em breve, mais fotos direto do Instagram.</p>
+  <section id="desenhos" class="galeria galeria--desenhos">
+    <div class="galeria__head">
+      <h2>Desenhos</h2>
+      <p>Aquarela, mangá e arte digital. Personagens, fadas e cenários cheios de cor.</p>
+    </div>
     <div class="galeria__grid">
-      <figure class="galeria__item galeria__item--teal galeria__item--big"><span>em breve</span></figure>
-      <figure class="galeria__item galeria__item--rose"><span>em breve</span></figure>
-      <figure class="galeria__item galeria__item--lilac"><span>em breve</span></figure>
-      <figure class="galeria__item galeria__item--lilac"><span>em breve</span></figure>
-      <figure class="galeria__item galeria__item--teal"><span>em breve</span></figure>
-      <figure class="galeria__item galeria__item--rose"><span>em breve</span></figure>
+      <button class="obra" type="button" data-full="img/desenhos/aquarela-chibi.webp" data-alt="Aquarela de uma menina abraçando um gatinho sob uma árvore"><img src="img/desenhos/aquarela-chibi.webp" alt="Aquarela de uma menina abraçando um gatinho sob uma árvore" width="980" height="686" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/desenhos/vila-cogumelos.webp" data-alt="Cenário fantástico com poço, borboletas e casa de cogumelo"><img src="img/desenhos/vila-cogumelos.webp" alt="Cenário fantástico com poço, borboletas e casa de cogumelo" width="675" height="506" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/desenhos/fada-rosa.webp" data-alt="Fada de cabelo rosa sentada entre cogumelos"><img src="img/desenhos/fada-rosa.webp" alt="Fada de cabelo rosa sentada entre cogumelos" width="441" height="686" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/desenhos/unicornio-floresta.webp" data-alt="Mulher e unicórnio branco numa floresta ao entardecer"><img src="img/desenhos/unicornio-floresta.webp" alt="Mulher e unicórnio branco numa floresta ao entardecer" width="968" height="686" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/desenhos/gueixa-sombrinha.webp" data-alt="Mulher de quimono sob uma sombrinha rosa, com uma peônia"><img src="img/desenhos/gueixa-sombrinha.webp" alt="Mulher de quimono sob uma sombrinha rosa, com uma peônia" width="480" height="686" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/desenhos/cerejeira-lago.webp" data-alt="Paisagem digital com cerejeira florida, lago rosa e montanhas"><img src="img/desenhos/cerejeira-lago.webp" alt="Paisagem digital com cerejeira florida, lago rosa e montanhas" width="848" height="566" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/desenhos/fadas-campo.webp" data-alt="Fadas e duendes num campo de cogumelos gigantes"><img src="img/desenhos/fadas-campo.webp" alt="Fadas e duendes num campo de cogumelos gigantes" width="1201" height="686" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/desenhos/sereia-verde.webp" data-alt="Sereia de cabelo verde sentada numa pedra"><img src="img/desenhos/sereia-verde.webp" alt="Sereia de cabelo verde sentada numa pedra" width="392" height="686" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/desenhos/chibis-grupo.webp" data-alt="Ilustração chibi de sete rapazes empilhados sobre letras grandes"><img src="img/desenhos/chibis-grupo.webp" alt="Ilustração chibi de sete rapazes empilhados sobre letras grandes" width="549" height="686" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/desenhos/fadas-cogumelos.webp" data-alt="Fadas entre cogumelos coloridos num cenário de fantasia"><img src="img/desenhos/fadas-cogumelos.webp" alt="Fadas entre cogumelos coloridos num cenário de fantasia" width="916" height="523" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/desenhos/ruiva-cogumelo.webp" data-alt="Personagem ruiva sentada num cogumelo laranja"><img src="img/desenhos/ruiva-cogumelo.webp" alt="Personagem ruiva sentada num cogumelo laranja" width="458" height="686" loading="lazy"></button>
+    </div>
+  </section>
+
+  <section id="telas" class="galeria galeria--telas">
+    <div class="galeria__head">
+      <h2>Telas</h2>
+      <p>Pinturas em tela: retratos, cenas e paisagens pintados do primeiro esboço à assinatura.</p>
+    </div>
+    <div class="galeria__grid">
+      <button class="obra" type="button" data-full="img/telas/rosto-colorido.webp" data-alt="Pintura de um rosto em cores vibrantes, com as mãos cobrindo parte do rosto"><img src="img/telas/rosto-colorido.webp" alt="Pintura de um rosto em cores vibrantes, com as mãos cobrindo parte do rosto" width="546" height="627" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/telas/casal-bambuzal.webp" data-alt="Pintura de um casal abraçado num bambuzal"><img src="img/telas/casal-bambuzal.webp" alt="Pintura de um casal abraçado num bambuzal" width="847" height="589" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/telas/menina-olhos-azuis.webp" data-alt="Retrato pintado de uma menina de olhos azuis e brincos vermelhos"><img src="img/telas/menina-olhos-azuis.webp" alt="Retrato pintado de uma menina de olhos azuis e brincos vermelhos" width="792" height="829" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/telas/coruja-branca.webp" data-alt="Pintura de uma coruja branca sobre uma pedra, com um castelo ao fundo"><img src="img/telas/coruja-branca.webp" alt="Pintura de uma coruja branca sobre uma pedra, com um castelo ao fundo" width="384" height="511" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/telas/bicicleta-flores.webp" data-alt="Pintura de uma bicicleta azul com cesta de flores"><img src="img/telas/bicicleta-flores.webp" alt="Pintura de uma bicicleta azul com cesta de flores" width="490" height="643" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/telas/menina-rosas.webp" data-alt="Pintura de uma menina cercada de rosas vermelhas e pretas"><img src="img/telas/menina-rosas.webp" alt="Pintura de uma menina cercada de rosas vermelhas e pretas" width="570" height="814" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/telas/casal-banco.webp" data-alt="Pintura de um casal sentado num banco de parque"><img src="img/telas/casal-banco.webp" alt="Pintura de um casal sentado num banco de parque" width="535" height="427" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/telas/mulher-leque.webp" data-alt="Pintura de uma mulher de rosa com um leque, diante de uma janela redonda"><img src="img/telas/mulher-leque.webp" alt="Pintura de uma mulher de rosa com um leque, diante de uma janela redonda" width="640" height="618" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/telas/rapaz-livros.webp" data-alt="Retrato pintado de um rapaz de colete, entre livros"><img src="img/telas/rapaz-livros.webp" alt="Retrato pintado de um rapaz de colete, entre livros" width="442" height="622" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/telas/mulher-janela.webp" data-alt="Pintura de uma mulher de vestido vermelho sentada perto de uma janela"><img src="img/telas/mulher-janela.webp" alt="Pintura de uma mulher de vestido vermelho sentada perto de uma janela" width="495" height="633" loading="lazy"></button>
+    </div>
+  </section>
+
+  <section id="realismo" class="galeria galeria--realismo">
+    <div class="galeria__head">
+      <h2>Realismo</h2>
+      <p>Retratos a grafite, com luz, sombra e textura trabalhadas até parecer foto.</p>
+    </div>
+    <div class="galeria__grid">
+      <button class="obra" type="button" data-full="img/realismo/retrato-moldura.webp" data-alt="Retrato a grafite de uma mulher sorrindo, emoldurado"><img src="img/realismo/retrato-moldura.webp" alt="Retrato a grafite de uma mulher sorrindo, emoldurado" width="532" height="686" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/realismo/mulher-grafite.webp" data-alt="Retrato realista a grafite de uma mulher de olhar intenso"><img src="img/realismo/mulher-grafite.webp" alt="Retrato realista a grafite de uma mulher de olhar intenso" width="448" height="686" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/realismo/crianca-grafite.webp" data-alt="Retrato a grafite de uma criança sorrindo, emoldurado"><img src="img/realismo/crianca-grafite.webp" alt="Retrato a grafite de uma criança sorrindo, emoldurado" width="601" height="686" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/realismo/rapaz-perfil.webp" data-alt="Retrato a grafite de um rapaz de cabelo longo olhando para o alto"><img src="img/realismo/rapaz-perfil.webp" alt="Retrato a grafite de um rapaz de cabelo longo olhando para o alto" width="414" height="686" loading="lazy"></button>
+      <button class="obra" type="button" data-full="img/realismo/olhares.webp" data-alt="Desenho a grafite de várias fileiras de olhares dentro de uma moldura de espinhos"><img src="img/realismo/olhares.webp" alt="Desenho a grafite de várias fileiras de olhares dentro de uma moldura de espinhos" width="495" height="697" loading="lazy"></button>
     </div>
     <a href="https://instagram.com/fabis_atelier" target="_blank" rel="noopener" class="galeria__link">Ver mais no Instagram @fabis_atelier</a>
   </section>
 
-  <section id="cursos" class="cursos">
-    <p class="eyebrow eyebrow--center">As aulas</p>
-    <h2 class="cursos__title">Duas formas de começar</h2>
+  <section id="aulas" class="aulas">
+    <h2 class="aulas__title">Duas formas de começar</h2>
 
-    <div class="cursos__grid">
+    <div class="aulas__grid">
 
-      <article class="curso curso--desenho">
-        <div class="curso__head">
-          <span class="curso__idade">a partir de 7 anos</span>
+      <article class="aula">
+        <img src="img/desenhos/fada-rosa.webp" alt="" width="441" height="686" loading="lazy">
+        <div class="aula__body">
+          <span class="aula__idade">a partir de 7 anos</span>
           <h3>Desenho</h3>
-          <p class="curso__sub">Estilo mangá &amp; desenho artístico</p>
+          <p class="aula__sub">Estilo mangá e desenho artístico</p>
+          <p>Da criação de personagens e roupas até cenários urbanos e rurais e alguns tipos de animais. Você aprende a colorir com lápis de cor, criar texturas, finalizar com caneta nanquim e treinar luz e sombra no grafite, caminhando para o realismo. E tem exercícios só para destravar a criatividade, sem ficar preso apenas à técnica.</p>
+          <ul>
+            <li>Criação de personagens e figurino</li>
+            <li>Cenários urbanos, rurais e animais</li>
+            <li>Cor com lápis de cor e texturas</li>
+            <li>Contorno em nanquim</li>
+            <li>Luz e sombra em grafite, rumo ao realismo</li>
+          </ul>
+          <p class="aula__duracao">Aulas de 1h30 a 2h</p>
         </div>
-        <p class="curso__desc">Da criação de personagens e roupas até cenários urbanos e rurais e alguns tipos de animais. Você aprende a colorir com lápis de cor, criar texturas, finalizar com caneta nanquim e treinar luz e sombra no grafite, caminhando para o realismo. E tem exercícios só para destravar a criatividade, sem ficar preso apenas à técnica.</p>
-        <ul class="curso__lista">
-          <li>Criação de personagens e figurino</li>
-          <li>Cenários urbanos, rurais e animais</li>
-          <li>Cor com lápis de cor e texturas</li>
-          <li>Contorno em nanquim</li>
-          <li>Luz e sombra em grafite, rumo ao realismo</li>
-        </ul>
-        <p class="curso__duracao">Aulas de 1h30 a 2h</p>
       </article>
 
-      <article class="curso curso--pintura">
-        <div class="curso__head">
-          <span class="curso__idade">a partir de 9-10 anos</span>
+      <article class="aula">
+        <img src="img/telas/bicicleta-flores.webp" alt="" width="490" height="643" loading="lazy">
+        <div class="aula__body">
+          <span class="aula__idade">a partir de 9 a 10 anos</span>
           <h3>Pintura em tela</h3>
-          <p class="curso__sub">Da sua imaginação para a tela</p>
+          <p class="aula__sub">Da sua imaginação para a tela</p>
+          <p>A pintura pode partir da sua imaginação, de referências ou de imagens prontas, e a Fabiana orienta técnica, tinta e composição em cada etapa, até a tela ficar do jeito que você via na cabeça.</p>
+          <ul>
+            <li>A partir de imaginação ou referência</li>
+            <li>Técnicas de tinta e composição</li>
+            <li>Acompanhamento passo a passo</li>
+          </ul>
+          <p class="aula__duracao">Aulas de 1h30 a 2h</p>
         </div>
-        <p class="curso__desc">A pintura pode partir da sua imaginação, de referências ou de imagens prontas, e a Fabiana orienta técnica, tinta e composição em cada etapa, até a tela ficar do jeito que você via na cabeça.</p>
-        <ul class="curso__lista">
-          <li>A partir de imaginação ou referência</li>
-          <li>Técnicas de tinta e composição</li>
-          <li>Acompanhamento passo a passo</li>
-        </ul>
-        <p class="curso__duracao">Aulas de 1h30 a 2h</p>
       </article>
 
     </div>
   </section>
 
   <section id="como-funciona" class="como">
-    <p class="eyebrow eyebrow--center">Antes de começar</p>
-    <h2 class="como__title">Vem conhecer numa aula experimental</h2>
-    <p class="como__lede">Desenho e pintura em tela têm aula experimental, dá pra sentir o ritmo do atelier antes de se matricular.</p>
-    <div class="como__grid">
-      <div class="como__item">
-        <span class="como__num">01</span>
-        <p>Chama no WhatsApp e conta o que quer aprender.</p>
-      </div>
-      <div class="como__item">
-        <span class="como__num">02</span>
-        <p>Combinamos dia e horário da aula experimental.</p>
-      </div>
-      <div class="como__item">
-        <span class="como__num">03</span>
-        <p>Você experimenta o atelier e decide se quer continuar.</p>
-      </div>
-    </div>
+    <h2>Vem conhecer numa aula experimental</h2>
+    <p class="como__lede">Desenho e pintura em tela têm aula experimental. Dá para sentir o ritmo do atelier antes de se matricular.</p>
+    <ol class="como__lista">
+      <li><span>1</span>Chama no WhatsApp e conta o que quer aprender.</li>
+      <li><span>2</span>Combinamos dia e horário da aula experimental.</li>
+      <li><span>3</span>Você experimenta o atelier e decide se quer continuar.</li>
+    </ol>
   </section>
 
   <section id="contato" class="contato">
     <div class="contato__inner">
-      <div>
-        <p class="eyebrow">Contato</p>
+      <div class="contato__info">
+        <img class="contato__foto" src="img/fabiana/fabiana-avental.webp" alt="Fabiana" width="540" height="540" loading="lazy">
         <h2>Aparece no atelier</h2>
         <dl class="contato__lista">
           <div>
@@ -195,6 +212,16 @@
   <span>Fabi's Atelier, Itu/SP</span>
   <a href="https://instagram.com/fabis_atelier" target="_blank" rel="noopener">@fabis_atelier</a>
 </footer>
+
+<dialog class="lightbox" aria-label="Visualizador de imagem">
+  <button class="lightbox__close" aria-label="Fechar">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" aria-label="Anterior">&#8249;</button>
+  <figure>
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" aria-label="Próxima">&#8250;</button>
+</dialog>
 
 <script src="script.js"></script>
 </body>
