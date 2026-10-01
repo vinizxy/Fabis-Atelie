@@ -9,7 +9,9 @@
   --line: rgba(28, 28, 26, 0.16);
   --display: "Bricolage Grotesque", "Segoe UI", sans-serif;
   --text: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --max: 1240px;
+  /* margem lateral: nunca menor que o respiro mínimo, e centraliza o conteúdo em telas largas */
+  --gutter: max(clamp(1.25rem, 5vw, 4rem), calc((100% - var(--max)) / 2));
 }
 
 * { box-sizing: border-box; }
@@ -131,8 +133,6 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 
 /* ---------- hero ---------- */
 .hero {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: clamp(2.5rem, 6vw, 5rem) var(--gutter) clamp(3.5rem, 8vw, 6rem);
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -155,11 +155,11 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.24s both; }
 
-.hero__art { position: relative; padding: 0 0 2.5rem 2.5rem; }
+.hero__art { position: relative; padding: 0 1.4rem 2.5rem 2.5rem; }
 .hero__art::before {
   content: "";
   position: absolute;
-  top: 1.5rem; right: -1.2rem; bottom: 4rem; left: 4rem;
+  top: 1.5rem; right: 0; bottom: 4rem; left: 4rem;
   background: var(--trim);
   z-index: 0;
 }
@@ -186,7 +186,8 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 }
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; }
-  .hero__art { max-width: 520px; }
+  .hero__art { max-width: 520px; width: 100%; padding: 0 1rem 2rem 1.5rem; }
+  .hero__art::before { left: 3rem; }
 }
 
 /* ---------- sobre ---------- */
@@ -199,7 +200,6 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
   align-items: center;
   max-width: none;
 }
-.sobre > * { max-width: 560px; justify-self: center; width: 100%; }
 .sobre__fotos { position: relative; padding-bottom: 3rem; padding-right: 3rem; }
 .sobre__foto { border: 8px solid var(--wall); box-shadow: 0 24px 44px -24px rgba(0, 0, 0, 0.45); }
 .sobre__foto--a { width: 100%; aspect-ratio: 1; object-fit: cover; transform: rotate(-2deg); }
@@ -217,7 +217,6 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 .galeria {
   padding: clamp(3.5rem, 8vw, 6rem) var(--gutter);
 }
-.galeria > * { max-width: 1240px; margin-left: auto; margin-right: auto; }
 .galeria__head {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -226,19 +225,21 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
   margin-bottom: clamp(2rem, 5vw, 3.2rem);
 }
 .galeria__head p { margin: 0; max-width: 42ch; color: inherit; opacity: 0.78; font-size: 1.08rem; padding-bottom: 0.5rem; }
-.galeria__grid { columns: 3; column-gap: clamp(0.8rem, 2vw, 1.4rem); }
+/* linhas justificadas: cada obra cresce na proporção da própria imagem,
+   então todas da mesma linha ficam com a mesma altura e a linha fecha nas duas bordas */
+.galeria__grid { --row: 300px; --gap: clamp(0.6rem, 1.6vw, 1.1rem); display: flex; flex-wrap: wrap; gap: var(--gap); }
+.galeria__grid::after { content: ""; flex-grow: 999; }
+.galeria__grid.is-justified::after { display: none; }
 .obra {
-  display: block;
-  width: 100%;
-  margin: 0 0 clamp(0.8rem, 2vw, 1.4rem);
+  flex: var(--r) 1 calc(var(--r) * var(--row));
+  aspect-ratio: var(--r);
   padding: 0;
   border: 0;
   background: transparent;
   cursor: zoom-in;
-  break-inside: avoid;
   overflow: hidden;
 }
-.obra img { width: 100%; transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.obra img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .obra:hover img { transform: scale(1.04); }
 
 .galeria--desenhos { background: var(--wall); }
@@ -250,9 +251,8 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 .galeria--realismo { background: var(--paper); }
 
 .galeria__link {
-  display: block;
-  width: fit-content;
-  margin-top: 1.4rem;
+  display: inline-block;
+  margin-top: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -260,12 +260,12 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 .galeria__link:hover { color: var(--red); }
 
 @media (max-width: 900px) {
-  .galeria__grid { columns: 2; }
+  .galeria__grid { --row: 200px; }
   .galeria__head { grid-template-columns: 1fr; }
 }
 
 /* ---------- aulas ---------- */
-.aulas { padding: clamp(3.5rem, 8vw, 6rem) var(--gutter); max-width: 1240px; margin: 0 auto; }
+.aulas { padding: clamp(3.5rem, 8vw, 6rem) var(--gutter); }
 .aulas__title { margin-bottom: clamp(2rem, 5vw, 3.2rem); max-width: 14ch; }
 .aulas__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 3.5rem); }
 .aula img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 30%; margin-bottom: 1.5rem; }
@@ -288,7 +288,6 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 
 /* ---------- como funciona ---------- */
 .como { background: var(--paper); padding: clamp(3.5rem, 8vw, 6rem) var(--gutter); }
-.como > * { max-width: 1240px; margin-left: auto; margin-right: auto; }
 .como h2 { max-width: 16ch; font-size: clamp(2rem, 4.4vw, 3.2rem); }
 .como__lede { margin-top: 1.1rem; max-width: 50ch; color: var(--ink-soft); }
 .como__lista {
@@ -306,8 +305,6 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 /* ---------- contato ---------- */
 .contato { background: var(--ink); color: var(--wall); padding: clamp(3.5rem, 8vw, 6rem) var(--gutter); }
 .contato__inner {
-  max-width: 1240px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: clamp(2rem, 6vw, 4.5rem);
@@ -365,3 +362,8 @@ h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0
 
 .hero h1 span { display: block; }
 .hero h1 span + span { margin-top: 0.15em; color: var(--ink-soft); font-weight: 600; }
+
+@media (max-width: 520px) {
+  .hero__actions .btn { flex: 1 1 100%; text-align: center; }
+  .contato .btn { display: block; text-align: center; }
+}
